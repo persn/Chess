@@ -4,8 +4,7 @@
 using namespace std;
 
 namespace core {
-	Board::Board()
-	{
+	Board::Board() {
 		cout << "Creating Board" << endl;
 
 		for (int i = 0; i < this->kDimensionSize; i++) {
@@ -15,8 +14,7 @@ namespace core {
 		}
 	}
 
-	Board::~Board()
-	{
+	Board::~Board() {
 		cout << "Destroying Board" << endl;
 	}
 
