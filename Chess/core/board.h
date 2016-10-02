@@ -6,9 +6,11 @@ namespace core {
 	class Board {
 	public:
 		Board();
+		~Board();
 
 		friend std::ostream &operator<<(std::ostream &, const Board &);
 	private:
-		const int kDimensionSize = 8;
+		static const int kDimensionSize = 8;
+		int tiles[kDimensionSize][kDimensionSize];
 	};
 }
