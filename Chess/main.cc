@@ -1,7 +1,12 @@
 #include <iostream>
+#include "core/board.h"
 
 using namespace std;
+using namespace core;
 
 int main() {
-	cout << "Hello World" << endl;
+	Board board;
+	cout << board << endl;
+
+	return 0;
 }
