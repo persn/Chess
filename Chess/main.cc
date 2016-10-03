@@ -1,8 +1,8 @@
 #include <iostream>
-#include "core/board.h"
+#include "board.h"
 
 using namespace std;
-using namespace core;
+using namespace chess;
 
 int main() {
 	Board board;

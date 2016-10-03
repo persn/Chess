@@ -3,7 +3,7 @@
 
 using namespace std;
 
-namespace core {
+namespace chess {
 	Board::Board() {
 		cout << "Creating Board" << endl;
 
@@ -12,10 +12,6 @@ namespace core {
 				this->tiles[i][j] = 0;
 			}
 		}
-	}
-
-	Board::~Board() {
-		cout << "Destroying Board" << endl;
 	}
 
 	ostream &operator<<(ostream &stream, const Board &board) {
