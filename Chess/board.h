@@ -3,6 +3,10 @@
 #include <ostream>
 
 namespace chess {
+	enum Piece {
+		kDummy, kPawn, kRook, kKnight, kBishop, kQueen, kKing
+	};
+
 	class Board {
 	public:
 		Board();
@@ -11,6 +15,10 @@ namespace chess {
 
 	private:
 		static const int kDimensionSize = 8;
-		int tiles[kDimensionSize][kDimensionSize];
+
+		int8_t tiles[kDimensionSize][kDimensionSize];
+
+		static void AppendHeaderFooter(std::ostream &);
+		static void AppendRow(std::ostream &, const char row, const int8_t[]);
 	};
 }
