@@ -4,10 +4,6 @@
 #include <ostream>
 
 namespace chess {
-	enum Piece {
-		kDummy, kPawn, kRook, kKnight, kBishop, kQueen, kKing
-	};
-
 	class Board {
 	public:
 		Board();
@@ -15,7 +11,7 @@ namespace chess {
 		friend std::ostream &operator<<(std::ostream &, const Board &);
 
 	private:
-		static const int kDimensionSize = 8;
+		static const uint8_t kDimensionSize = 8;
 
 		int8_t tiles[kDimensionSize][kDimensionSize];
 
