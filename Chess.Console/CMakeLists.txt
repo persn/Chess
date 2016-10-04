@@ -8,4 +8,8 @@ file(
     "${_src_root_path}/*.h*"
 )
 
-add_library (Chess STATIC ${_source_list})
+include_directories(../Chess/)
+
+add_executable (Chess.Console ${_source_list})
+
+target_link_libraries(Chess.Console Chess)
