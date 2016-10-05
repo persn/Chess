@@ -1,15 +1,16 @@
-#include "board.h"
+#include "game.h"
 #include <iostream>
 #include <sstream>
+
 
 using namespace std;
 using namespace chess;
 
 int main() {
-	Board board;
+	Game game;
 
-	while (true) {
-		cout << board << endl;
+	while (game.getIsGameRunning()) {
+		cout << *game.GetBoard() << endl;
 
 		string move;
 
@@ -17,7 +18,7 @@ int main() {
 		cin >> move;
 		cout << endl;
 
-		board.MovePiece(move);
+		game.GetBoard()->MovePiece(move);
 	}
 
 	return 0;
