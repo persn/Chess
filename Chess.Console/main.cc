@@ -1,5 +1,6 @@
 #include "board.h"
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 using namespace chess;
@@ -7,11 +8,17 @@ using namespace chess;
 int main() {
 	Board board;
 
-	cout << board << endl;
+	while (true) {
+		cout << board << endl;
 
-	board.MovePiece(6, 1, 5, 1);
+		string move;
 
-	cout << board << endl;
+		cout << "Move piece (from-to, b2-b3): ";
+		cin >> move;
+		cout << endl;
+
+		board.MovePiece(move);
+	}
 
 	return 0;
 }

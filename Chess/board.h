@@ -8,7 +8,12 @@ namespace chess {
 	public:
 		Board();
 
-		void MovePiece(int fromRow, int fromColumn, int toRow, int toColumn);
+		void MovePiece(const std::string move);
+		void MovePiece(
+			const int fromRow,
+			const int fromColumn,
+			const int toRow,
+			const int toColumn);
 
 		friend std::ostream &operator<<(std::ostream &, const Board &);
 

@@ -52,8 +52,24 @@ namespace chess {
 		}
 	}
 
-	void Board::MovePiece(int fromRow, int fromColumn, int toRow, int toColumn)
-	{
+	/**
+	 * Using format from-to, for example b2-b3. Where letter is column and number is row.
+	 */
+	void Board::MovePiece(const std::string move) {
+		int fromRow = '8' - move[1];
+		int fromCol = move[0] - 'a';
+
+		int toRow = '8' - move[4];
+		int toCol = move[3] - 'a';
+
+		this->MovePiece(fromRow, fromCol, toRow, toCol);
+	}
+
+	void Board::MovePiece(
+		const int fromRow,
+		const int fromColumn,
+		const int toRow,
+		const int toColumn) {
 		this->tiles[toRow][toColumn] = this->tiles[fromRow][fromColumn];
 		this->tiles[fromRow][fromColumn] = kEmpty;
 	}
