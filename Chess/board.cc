@@ -47,9 +47,15 @@ namespace chess {
 
 		for (int i = 2; i < this->kDimensionSize - 2; i++) {
 			for (int j = 0; j < this->kDimensionSize; j++) {
-				this->tiles[i][j] = kDummy;
+				this->tiles[i][j] = kEmpty;
 			}
 		}
+	}
+
+	void Board::MovePiece(int fromRow, int fromColumn, int toRow, int toColumn)
+	{
+		this->tiles[toRow][toColumn] = this->tiles[fromRow][fromColumn];
+		this->tiles[fromRow][fromColumn] = kEmpty;
 	}
 
 	ostream &operator<<(ostream &stream, const Board &board) {

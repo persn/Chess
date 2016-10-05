@@ -8,6 +8,8 @@ namespace chess {
 	public:
 		Board();
 
+		void MovePiece(int fromRow, int fromColumn, int toRow, int toColumn);
+
 		friend std::ostream &operator<<(std::ostream &, const Board &);
 
 	private:

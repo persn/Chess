@@ -2,6 +2,6 @@
 
 namespace chess {
 	enum Piece {
-		kDummy, kPawn, kRook, kKnight, kBishop, kQueen, kKing
+		kEmpty, kPawn, kRook, kKnight, kBishop, kQueen, kKing
 	};
 }
